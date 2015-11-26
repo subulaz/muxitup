@@ -1,0 +1,3 @@
+File layout based on path from root e.g. move files from etc/* to /etc/*
+All configurations tested on Debian Wheezy, Jessie, Stretch, and Sid
+All configurations tested on dual-core ThinkPad and quad-core MiniATX systems
