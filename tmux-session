@@ -1,11 +1,23 @@
 ## Default tmux-session
 
-splitw -v -p 46 -t 0 								# split window vertically
+splitw -v -p 46 -t 0 		# split window vertically
 
-splitw -h -p 88 -t 0 								# create top left column
+splitw -h -p 88 -t 0 		# create top left column
 
-splitw -h -p 50 -t 1 '~/bin/mynet'	# split the bottom horizontally and start iftop
+selectp -t 2				# select the new bottom pane
 
-splitw -v -p 68 -t 3 '~/bin/mylog' 	# split the bottom right vertically and start multitail
+splitw -v -p 32 -t 2		# split the bottom vertically
 
-selectp -t 0												# return to the new Pane 0 in foreground
+selectp -t 2				# select the middle pane
+
+splitw -h -p 50 -t 2		# split horizontally
+
+selectp -t 4				# select the bottom pane
+
+splitw -h -p 66 -t 4		# split horizontally
+
+selectp -t 5				# select the remaining large bottom pane
+
+splitw -h -p 50 -t 5		# split horizontally
+
+selectp -t 0				# return to the new Pane 0 in foreground
