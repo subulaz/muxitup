@@ -1,23 +1,42 @@
 ## Default tmux-session
 
-splitw -v -p 46 -t 0 		# split window vertically
+splitw -v -p 50 -t 0 		# split window vertically
 
-splitw -h -p 88 -t 0 		# create top left column
+selectp -t 1            # select the bottom pane
 
-selectp -t 2				# select the new bottom pane
+splitw -v -p 46 -t 1        # split the bottom vertically
 
-splitw -v -p 32 -t 2		# split the bottom vertically
+selectp -t 2            # select the new bottom pane
 
-selectp -t 2				# select the middle pane
+splitw -v -p 22 -t 2        # split it vertically too
 
-splitw -h -p 50 -t 2		# split horizontally
+selectp -t 0            # go back to the first pane
 
-selectp -t 4				# select the bottom pane
+splitw -h -p 26 -t 0        # split it horizontally
 
-splitw -h -p 66 -t 4		# split horizontally
+selectp -t 1            # now select the right top
 
-selectp -t 5				# select the remaining large bottom pane
+splitw -v -p 50 -t 1        # split it vertically
 
-splitw -h -p 50 -t 5		# split horizontally
+selectp -t 3            # go to the new middle pane
 
-selectp -t 0				# return to the new Pane 0 in foreground
+splitw -h -p 50 -t 3        # split it horizontally in half
+
+selectp -t 5            # drop down to the new main bottom pane
+
+splitw -h -p 66 -t 5		# split horizontally
+
+selectp -t 6			# select the remaining large bottom pane
+
+splitw -h -p 50 -t 6		# split horizontally
+
+send-keys -t 1 'mymon' enter
+send-keys -t 2 'mygpu' enter
+send-keys -t 5 'mytop' enter
+send-keys -t 6 'myipt' enter
+send-keys -t 7 'mynet' enter
+send-keys -t 8 'mysys' enter
+
+select-pane -t 1
+
+attach
