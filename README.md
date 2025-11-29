@@ -1,9 +1,13 @@
 # muxitup
-install modern unix and configure tmux
+WIP
 
 # usage
 clone repo
-run `muxitup`
+run `muxitup [class]` where class is
+ - laptop
+ - desktop
+ - server
+ - tablet
 
-# origin
+# origins
 https://github.com/johnalanwoods/maintained-modern-unix
